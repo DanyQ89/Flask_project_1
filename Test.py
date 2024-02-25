@@ -52,7 +52,6 @@ def results(nickname, level, rating):
 @app.route('/load_photo', methods=['POST', 'GET'])
 def load_photo():
     if request.method == 'POST':
-        print(1)
         file = request.files['filename']
         return render_template('index_load_photo.html', filename=f'static/img/{file.filename}')
     elif request.method == 'GET':
