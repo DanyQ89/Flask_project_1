@@ -39,5 +39,10 @@ def astronaut_selection():
     return render_template('anketa_for_astr.html')
 
 
+@app.route('/choice/<username>')
+def choice(username):
+    return render_template('index_choice.html', username=username)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1', debug=True)
