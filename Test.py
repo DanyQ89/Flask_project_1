@@ -33,7 +33,11 @@ def image_mars():
 def promotion_image():
     return render_template('index_css.html')
 
-@app.route('astronaut_selection')
+
+@app.route('/astronaut_selection', methods=['POST', 'GET'])
+def astronaut_selection():
+    return render_template('anketa_for_astr.html')
+
 
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1', debug=True)
